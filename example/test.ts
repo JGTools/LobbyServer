@@ -10,7 +10,8 @@ const user: LobbyPlayer_I = {
     id: "asdf",
     name: "Bob",
     color: 0xff0000
-}
+};
+
 lobby.addUser(user);
 console.log(lobby.getLobby());
 lobby.removeUser(user.id);
