@@ -12,7 +12,7 @@ export interface LobbyUser_I {
 export default class LobbyServer<MetaType> {
     #id: string;
     #hostID: string | null = null;
-    #users = new Map();
+    #users = new Map<string, LobbyUser_I>();
     #meta: MetaType;
 
     constructor(id: string, meta: MetaType) {
@@ -33,7 +33,7 @@ export default class LobbyServer<MetaType> {
                 this.#hostID = null;
         }
     }
-    setMeta(u: LobbyUser_I, meta: any) {
+    setMeta(u: LobbyUser_I, meta: MetaType) {
         if (this.#hostID != u.id)
             return;
         this.#meta = meta;

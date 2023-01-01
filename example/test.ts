@@ -16,3 +16,6 @@ lobby.addUser(user);
 console.log(lobby.getLobby());
 lobby.removeUser(user.id);
 console.log(lobby.getLobby());
+lobby.addUser(user);
+lobby.setMeta(user, { maxPlayers: 9 });
+console.log(lobby.getLobby());
