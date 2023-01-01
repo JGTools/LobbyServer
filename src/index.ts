@@ -24,10 +24,14 @@ export default class LobbyServer<MetaType> {
         if (this.#hostID == null)
             this.#hostID = u.id;
     }
-    removeUser(u: LobbyUser_I) {
-        this.#users.delete(u.id);
-        if (this.#hostID == u.id)
-            this.#hostID = [...this.#users][0][1].id || null;
+    removeUser(id: string) {
+        this.#users.delete(id);
+        if (this.#hostID == id) {
+            if (this.#users.size > 0)
+                this.#hostID = [...this.#users][0][1].id;
+            else
+                this.#hostID = null;
+        }
     }
     setMeta(u: LobbyUser_I, meta: any) {
         if (this.#hostID != u.id)
