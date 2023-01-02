@@ -1,6 +1,6 @@
 {
     "name": "@jgtools/lobbyserver",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Lobby system for online games",
     "type": "module",
     "main": "dist/index.js",
