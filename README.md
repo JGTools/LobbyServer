@@ -23,7 +23,7 @@ import LobbyServer from "@jgtools/lobbyserver";
 
 ```html
 <script type="module">
-    import LobbyServer from "https://cdn.jsdelivr.net/npm/@jgtools/lobbyserver@1.0.0/dist/index.min.js";
+    import LobbyServer from "https://cdn.jsdelivr.net/npm/@jgtools/lobbyserver@1.0.2/dist/index.min.js";
     // ...
 </script>
 ```

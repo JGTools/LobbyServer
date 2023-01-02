@@ -46,4 +46,8 @@ export default class LobbyServer<MetaType> {
             meta: this.#meta
         };
     }
+    getID() { return this.#id }
+    getHostID() { return this.#hostID }
+    getUsers() { return this.#users }
+    getMeta() { return this.#meta }
 }
