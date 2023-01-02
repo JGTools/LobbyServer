@@ -16,11 +16,11 @@ const user: LobbyPlayer_I = {
 };
 
 lobby.addUser(user);
-console.log(lobby.getLobby());
+console.log(lobby.getUsers());
 lobby.setMeta(user, { maxPlayers: 9 });
-console.log(lobby.getLobby());
+console.log(lobby.getMeta());
 lobby.removeUser(user.id);
-console.log(lobby.getLobby());
+console.log(lobby.getUsers());
 lobby.addUser(user);
 
 const u = lobby.getUsers().get("123");
