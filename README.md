@@ -40,7 +40,7 @@ interface MetaData_I {
   maxPlayers: number;
 }
 
-const lobby = new LobbyServer<MetaData_I, LobbyPlayer_I>("lobbyid", {
+const lobby = new LobbyServer<MetaData_I, LobbyPlayer_I>({
   maxPlayers: 8,
 });
 

@@ -4,13 +4,11 @@ export interface LobbyUser_I {
 }
 
 export default class LobbyServer<MetaType_I, UserType_I extends LobbyUser_I>  {
-    #id: string;
     #hostID: string | null = null;
     #users = new Map<string, UserType_I>();
     #meta: MetaType_I;
 
-    constructor(id: string, meta: MetaType_I) {
-        this.#id = id;
+    constructor(meta: MetaType_I) {
         this.#meta = meta;
     }
     addUser(u: UserType_I) {
@@ -32,7 +30,6 @@ export default class LobbyServer<MetaType_I, UserType_I extends LobbyUser_I>  {
             return;
         this.#meta = meta;
     }
-    getID() { return this.#id }
     getHostID() { return this.#hostID }
     getUsers() { return this.#users }
     getMeta() { return this.#meta }
